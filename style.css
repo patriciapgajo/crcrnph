@@ -1,0 +1,668 @@
+/* style.css — Academic ocean-inspired styles for Coral Reef Network */
+:root {
+    --accent: #0b5160;
+    /* academic teal */
+    --accent-2: #0e6a7a;
+    --bg: #fbfeff;
+    --card: #ffffff;
+    --text: #07292b;
+    --muted: #5b7174;
+    --radius: 6px;
+    --measure: 66ch;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
+    font-size: 16px;
+    letter-spacing: 0.3px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem
+}
+
+.site-header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    max-width: 100%
+}
+
+.logo {
+    margin: 0;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Merriweather', serif
+}
+
+/* Top-right nav overlay */
+.site-header .main-nav {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 0.5rem
+}
+
+.site-header .main-nav a {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(7, 41, 43, 0.06);
+    font-variant: small-caps
+}
+
+/* Dropdown menu */
+.nav-dropdown {
+    position: relative;
+    display: inline-block
+}
+
+.nav-dropdown>a {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(7, 41, 43, 0.06);
+    font-variant: small-caps;
+    display: block
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(7, 41, 43, 0.1);
+    border-radius: 6px;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    z-index: 200;
+    margin-top: 0.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 0.75rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-variant: normal;
+    border: none;
+    background: transparent;
+    text-align: left;
+    transition: background 0.2s
+}
+
+.dropdown-menu a:hover {
+    background: rgba(11, 81, 96, 0.08)
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: flex
+}
+
+/* Hero */
+.hero-image {
+    background: url('assets/background fish.png') no-repeat center 100%;
+    background-size: cover, contain;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative
+}
+
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%
+}
+
+.hero-container {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.hero-title {
+    font-size: 1.9rem;
+    margin: 0 0 0.4rem;
+    line-height: 1.02;
+    font-family: 'Merriweather', serif
+}
+
+.lead {
+    opacity: 0.95;
+    max-width: var(--measure);
+    margin: 0
+
+    /* hero credit */
+    .hero-credit {
+        color: rgba(7, 41, 43, 0.6);
+        background: transparent;
+        padding: 0.5rem 1.5rem 0 0;
+        border-radius: 0;
+        font-size: 0.75rem;
+        opacity: 1;
+        text-align: right;
+        font-style: italic;
+    }
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: var(--accent);
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid rgba(11, 81, 96, 0.06);
+    font-weight: 600
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(7, 41, 43, 0.06);
+    color: var(--accent)
+}
+
+/* Footer CTA and featured articles */
+.home-footer {
+    background: #fff;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(7, 41, 43, 0.04)
+}
+
+.footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0
+}
+
+.footer-cta h2 {
+    margin: 0;
+    font-family: 'Merriweather', serif
+}
+
+.cta-actions {
+    display: flex;
+    gap: 0.6rem
+}
+
+.featured-articles {
+    padding: 1rem 0
+}
+
+.featured-articles h3 {
+    margin-bottom: 0.5rem
+}
+
+.featured-articles ul {
+    margin: 0;
+    padding-left: 1.1rem
+}
+
+.featured-articles li {
+    margin: 0.45rem 0
+}
+
+/* Panels, tables, map placeholder */
+.panel {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(4, 41, 45, 0.04)
+}
+
+.table-wrap {
+    overflow: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+thead th {
+    background: #f7feff;
+    text-align: left;
+    padding: 0.6rem;
+    border-bottom: 1px solid rgba(4, 41, 45, 0.06)
+}
+
+tbody td {
+    padding: 0.6rem;
+    border-bottom: 1px solid rgba(4, 41, 45, 0.04)
+}
+
+.map-placeholder {
+    height: 300px;
+    background: linear-gradient(90deg, #e6f7fb, #f3fcff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    border-radius: 6px;
+    border: 1px dashed rgba(4, 41, 45, 0.06)
+}
+
+/* Utility */
+.muted {
+    color: var(--muted)
+}
+
+.small {
+    font-size: 0.9rem
+}
+
+.prose {
+    max-width: var(--measure);
+    margin: 0 auto
+}
+
+.prose p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8
+}
+
+.prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem
+}
+
+.prose h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem
+}
+
+.citation {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.95rem
+}
+
+/* Content pages (about, features, etc.) */
+.page-header {
+    background: #fff;
+    border-bottom: 1px solid rgba(7, 41, 43, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 50
+}
+
+.page-header .logo a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+.page-hero {
+    background: linear-gradient(180deg, #e8f4f7 0%, #f4fbff 100%);
+    padding: 3rem 0;
+    text-align: center
+}
+
+.page-hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem;
+    margin: 0 0 0.75rem;
+    color: var(--text)
+}
+
+.page-hero .lead {
+    margin: 0 auto;
+    max-width: var(--measure);
+    color: var(--muted)
+}
+
+.content-section {
+    padding: 4rem 0
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem
+}
+
+.section-alt {
+    background: #f7feff
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem
+}
+
+.team-member {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(4, 41, 45, 0.04)
+}
+
+.team-member h4 {
+    margin: 0 0 0.3rem;
+    font-family: 'Merriweather', serif
+}
+
+.team-member .role {
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem
+}
+
+.team-member p {
+    margin: 0;
+    line-height: 1.5
+}
+
+/* Team grid — 6 members in responsive columns */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem
+}
+
+.team-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(4, 41, 45, 0.04);
+    border-top: 3px solid var(--accent);
+    transition: transform 0.2s, box-shadow 0.2s
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(4, 41, 45, 0.08)
+}
+
+.team-card h3 {
+    margin: 0 0 0.4rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.15rem;
+    color: var(--text);
+    font-weight: 700
+}
+
+.team-card .team-role {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0 0 0.9rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.8px
+}
+
+.team-card p {
+    margin: 0.6rem 0;
+    line-height: 1.7;
+    color: var(--muted);
+    font-size: 0.95rem
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0
+}
+
+.timeline li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    margin-left: 0.5rem
+}
+
+.timeline li strong {
+    color: var(--accent)
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem
+}
+
+.purpose-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(4, 41, 45, 0.04)
+}
+
+.purpose-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem
+}
+
+.purpose-card h3 {
+    margin: 0 0 0.5rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem
+}
+
+.purpose-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7
+}
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(180deg, #e8f4f7 0%, #f4fbff 100%)
+}
+
+.cta-section h2 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(4, 41, 45, 0.04);
+    border-left: 4px solid var(--accent);
+    transition: transform 0.2s, box-shadow 0.2s
+}
+
+.project-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(4, 41, 45, 0.08)
+}
+
+.project-card h3 {
+    margin-bottom: 0.4rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem
+}
+
+.project-focus {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 0.8rem
+}
+
+.project-card p {
+    margin: 0.5rem 0;
+    color: var(--muted);
+    line-height: 1.7
+}
+
+/* News list */
+.news-list {
+    margin-top: 1.5rem
+}
+
+.news-item {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(4, 41, 45, 0.04);
+    border-top: 3px solid var(--accent-2)
+}
+
+.news-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    color: var(--text)
+}
+
+.news-meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0.3rem 0 1rem
+}
+
+.news-item p {
+    margin: 0.8rem 0;
+    color: var(--muted);
+    line-height: 1.7
+}
+
+.text-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s
+}
+
+.text-link:hover {
+    opacity: 0.8
+}
+
+.publication-filters {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f7feff;
+    border-radius: var(--radius)
+}
+
+.filter-btn {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem 0.3rem 0.3rem 0;
+    background: #fff;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s
+}
+
+.filter-btn:hover {
+    background: var(--accent);
+    color: #fff
+}
+
+/* Responsive */
+@media(min-width:800px) {
+    .hero-container {
+        max-width: 840px
+    }
+
+    .site-header .main-nav {
+        right: 2rem;
+        top: 2rem
+    }
+
+    .footer-cta {
+        flex-direction: row;
+        justify-content: space-between
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(min-width:1100px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}

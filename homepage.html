@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Coral Reef Conservation and Restoration Network — open datasets, monitoring tools, and publications for reef science and restoration.">
+    <title>Coral Reef Conservation and Restoration Network</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">Coral Reef Conservation & Restoration Network</h1>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="about.html">About</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#purpose">Our Purpose</a>
+                        <a href="about.html#team">The Team</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="news.html">News & Articles</a>
+                    </div>
+                </div>
+                <a href="network.html">The Network</a>
+                <a href="contact.html">Contact</a>
+                <a class="login-link" href="login.html">Member Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-centered">
+            <div class="container">
+                <h1 class="hero-title">Coral Reef Conservation<br>and Restoration Network</h1>
+                <p class="lead">Science-driven monitoring, open data, and community-led network.</p>
+                <p class="hero-ctas"><a class="btn" href="#datasets">Explore Datasets</a> <a class="btn ghost"
+                        href="login.html">Member Dashboard</a></p>
+
+                <nav class="quick-links" aria-label="Quick links">
+                    <a class="text-link" href="#datasets">Datasets</a>
+                    <a class="text-link" href="#features">Publications</a>
+                    <a class="text-link" href="#about">Methods & Team</a>
+                    <a class="text-link" href="#contact">Contact</a>
+                </nav>
+            </div>
+        </section>
+
+        <section id="datasets" class="container section" aria-labelledby="datasets-heading">
+            <h3 id="datasets-heading">Public Datasets</h3>
+            <p class="muted prose">Read-only dataset snapshots, metadata, and spatial layers for monitoring and
+                analysis. Data may be downloaded in CSV or GeoJSON and visualized on the map.</p>
+
+            <div class="featured-grid">
+                <article class="panel featured-card">
+                    <h4>Featured dataset — Luzon Reef Monitoring (2025)</h4>
+                    <p class="citation">DOI: 10.1234/example.doi — A 3-year monitoring dataset including percent coral
+                        cover, substrate categories, and species observations.</p>
+                    <p><a class="text-link" href="#">View dataset record</a> · <a class="text-link" href="#">Download
+                            CSV</a></p>
+                </article>
+                <div class="panel">
+                    <h4>Map View</h4>
+                    <div id="map" class="map-placeholder" role="img" aria-label="Map preview">Map placeholder —
+                        integrate Google Maps / QGIS Web Map Service here</div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="panel">
+                    <h4>Dataset Table</h4>
+                    <div class="table-wrap">
+                        <table id="dataset-table">
+                            <thead>
+                                <tr>
+                                    <th>Site</th>
+                                    <th>Date</th>
+                                    <th>Coral cover (%)</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- rows rendered by script.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small muted">This is a client-side example. Replace with server-driven data fetch for
+                        production.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container section prose" aria-labelledby="about-heading">
+            <h3 id="about-heading">About</h3>
+            <p>Our project brings together researchers, restoration practitioners, and community stewards to monitor,
+                protect, and restore coral reef ecosystems. We publish data, protocols, and findings openly for
+                scientific reuse and record keeping.</p>
+
+            <h4>Meet the team</h4>
+            <ul>
+                <li>Project Lead: Dr. Aileen P. Maypa</li>
+                <li>Senior Research Assistant: Denzyl G. Divinagracia</li>
+                <li>Research Assistant: Jhon Reimer C. Fajardo</li>
+                <li>Research Assistant: Patricia Nicole P. Gajo</li>
+                <li>Consultant: Clarissa T. Reboton</li>
+                <li>Consultant: Danielle Mark Fukuda</li>
+            </ul>
+        </section>
+
+        <section id="features" class="container section prose" aria-labelledby="features-heading">
+            <h3 id="features-heading">Features</h3>
+            <p>Highlighted publications and datasets curated by the network. Each entry links to metadata, DOI, and
+                supplementary data where available.</p>
+            <ol class="publication-list">
+                <li><a href="#">Maypa et al. (2025) — Long-term reef monitoring: methods and baseline data.</a></li>
+                <li><a href="#">Fukuda et al. (2024) — Restoration outcomes and statistical analysis.</a></li>
+            </ol>
+        </section>
+
+        <section id="contact" class="container section">
+            <h3>Contact</h3>
+            <p>For inquiries: <a href="mailto:reefconservationrestoration@gmail.com">info@example.org</a></p>
+            <p>For data access requests, please include organisation and purpose.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Coral Reef Conservation & Restoration Network</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
